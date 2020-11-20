@@ -1,0 +1,596 @@
+<!--tugas web kurs mata uang-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+
+    <!--file css-->
+    <style type="text/css">
+        body {
+            background-color: thistle;
+        }
+
+        input[id="data1"],
+        input[type=text] {
+            display: block;
+            box-sizing: border-bpox;
+            margin-bottom: 20px;
+            padding: 4px;
+            width: 220px;
+            height: 32px;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid #aaa;
+            font-family: sans-serif;
+            font-weight: 400;
+            font-size: 15px;
+            transition: 0.2s ease;
+        }
+
+        #box {
+            position: relative;
+            margin: 5% auto;
+            height: 400px;
+            width: 600px;
+            background: yellowgreen;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        .left {
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-sizing: border-box;
+            padding: 40px;
+            width: 300px;
+            height: 400px;
+        }
+
+
+        .right {
+            position: absolute;
+            top: 0;
+            right: 0;
+            box-sizing: border-box;
+            padding: 40px;
+            width: 300px;
+            height: 400px;
+            background-image: url(bg.jpeg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .h1 {
+            text-align: center;
+        }
+
+        input[type="button"]:hover,
+        input[type="button"]:focus {
+            background: #ff5722;
+            transition: 0.2s ease;
+        }
+
+        .p1 {
+            color: whitesmoke;
+        }
+    </style>
+
+</head>
+
+<body>
+    <br />
+    <h1 class="h1">Aplikasi Konversi Mata Uang</h1>
+
+    <div id="box">
+        <div class="left">
+            <!--design bagian kiri-->
+            <p class="p1">Mata Uang Asal</p> <br><br>
+            <form id="cnt1" name="cnt1" onsubmit="return false">
+
+                <select id="kategori">
+                    <option value="angka1">Indonesia-Rupiah</option>
+                    <option value="angka2">Inggris-Poundsterling</option>
+                    <option value="angka3">Austria-Euro</option>
+                    <option value="angka4">Yen Jepang</option>
+                    <option value="angka5">Arab Saudi-Riyal</option>
+                    <option value="angka6">China-Yuan</option>
+                    <option value="angka7">Dollar Singapore</option>
+                    <option value="angka8">Malaysia-Ringgit </option>
+                    <option value="angka9">Amerika-Dollar (Dollar US)</option>
+                </select>
+
+            </form>
+
+            <br><input id="data1" type="text" placeholder="" name=""><br>
+
+            <input type="button" onclick="hitung()" name="" value="Hitung">
+        </div>
+
+        <div class="right">
+            <!--design bagian kanan-->
+            <P class="p1">Mata Uang Tujuan</P> <br><br>
+            <form id="cnt2" name="cnt2" onsubmit="return false">
+                <select id="kategori1">
+                    <option value="angka1">Indonesia-Rupiah</option>
+                    <option value="angka2">Inggris-Poundsterling</option>
+                    <option value="angka3">Austria-Euro</option>
+                    <option value="angka4">Yen Jepang</option>
+                    <option value="angka5">Arab Saudi-Riyal</option>
+                    <option value="angka6">China-Yuan</option>
+                    <option value="angka7">Dollar Singapore</option>
+                    <option value="angka8">Malaysia-Ringgit </option>
+                    <option value="angka9">Amerika-Dollar (Dollar US)</option>
+                </select>
+            </form>
+            <br>
+            <p id="vw"></p>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <!--ini file javascript-->
+
+    <script type="text/javascript">
+
+        function hitung() {
+
+            var mata_uang = document.getElementById('cnt1').kategori.value;
+            var tukar_uang = document.getElementById('cnt2').kategori1.value;
+            var masukan = parseFloat(data1.value);
+
+            if (mata_uang == "angka9" && tukar_uang == "angka1") {
+
+                var hasil = masukan * 9.915;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka1" && tukar_uang == "angka2") {
+
+                hasil = masukan * 18.707;
+
+                document.getElementById("vw").innerHTML = hasil;
+            } else if (mata_uang == "angka1" && tukar_uang == "angka3") {
+
+                hasil = masukan * 0.000061;
+
+                document.getElementById("vw").innerHTML = hasil;
+            } else if (mata_uang == "angka1" && tukar_uang == "angka4") {
+
+                hasil = masukan * 46.519;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka1" && tukar_uang == "angka5") {
+
+                hasil = masukan * 0.00026;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka1" && tukar_uang == "angka6") {
+
+                hasil = masukan * 2.151;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka1" && tukar_uang == "angka7") {
+
+                hasil = masukan * 292.54;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka1" && tukar_uang == "angka8") {
+
+                hasil = masukan * 0.000029;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka1" && tukar_uang == "angka9") {
+
+                hasil = masukan * 0.000071;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka2" && tukar_uang == "angka3") {
+
+                hasil = masukan * 0.91;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka2" && tukar_uang == "angka4") {
+
+                hasil = masukan * 248;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka2" && tukar_uang == "angka5") {
+
+                hasil = masukan * 496;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka2" && tukar_uang == "angka6") {
+
+                hasil = masukan * 870;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka2" && tukar_uang == "angka7") {
+
+                hasil = masukan * 6.389;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka2" && tukar_uang == "angka8") {
+
+                hasil = masukan * 5.42;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka2" && tukar_uang == "angka9") {
+
+                hasil = masukan * 132;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka3" && tukar_uang == "angka4") {
+
+                hasil = masukan * 2.76;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka3" && tukar_uang == "angka5") {
+
+                hasil = masukan * 629;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka3" && tukar_uang == "angka6") {
+
+                hasil = masukan * 7.79;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka3" && tukar_uang == "angka7") {
+
+                hasil = masukan * 2.395;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka3" && tukar_uang == "angka8") {
+
+                hasil = masukan * 486;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka3" && tukar_uang == "angka9") {
+
+                hasil = masukan * 1.18;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka4" && tukar_uang == "angka5") {
+
+                hasil = masukan * 12.26;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka4" && tukar_uang == "angka6") {
+
+                hasil = masukan * 2153;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka4" && tukar_uang == "angka7") {
+
+                hasil = masukan * 158;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka4" && tukar_uang == "angka8") {
+
+                hasil = masukan * 1342;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka4" && tukar_uang == "angka9") {
+
+                hasil = masukan * 0.00084;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka5" && tukar_uang == "angka6") {
+
+                hasil = masukan * 1.24;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka5" && tukar_uang == "angka7") {
+
+                hasil = masukan * 1289;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka5" && tukar_uang == "angka8") {
+
+                hasil = masukan * 1.29;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka5" && tukar_uang == "angka9") {
+
+                hasil = masukan * 0.27;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka6" && tukar_uang == "angka7") {
+
+                hasil = masukan * 734;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka6" && tukar_uang == "angka8") {
+
+                hasil = masukan * 0.62;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka6" && tukar_uang == "angka9") {
+
+                hasil = masukan * 0.15;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka7" && tukar_uang == "angka8") {
+
+                hasil = masukan * 1177;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka7" && tukar_uang == "angka9") {
+
+                hasil = masukan * 48.33;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka8" && tukar_uang == "angka9") {
+
+                hasil = masukan * 0.24;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka9" && tukar_uang == "angka8") {
+
+                hasil = masukan * 4.11;
+
+                document.getElementById("vw").innerHTML = hasil;
+            } else if (mata_uang == "angka9" && tukar_uang == "angka7") {
+
+                hasil = masukan * 48.32;
+
+                document.getElementById("vw").innerHTML = hasil;
+            } else if (mata_uang == "angka9" && tukar_uang == "angka6") {
+
+                hasil = masukan * 658;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka9" && tukar_uang == "angka5") {
+
+                hasil = masukan * 5.31;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka9" && tukar_uang == "angka4") {
+
+                hasil = masukan * 0.31;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka9" && tukar_uang == "angka3") {
+
+                hasil = masukan * 0.85;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka9" && tukar_uang == "angka2") {
+
+                hasil = masukan * 0.76;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka9" && tukar_uang == "angka1") {
+
+                hasil = masukan * 9.915;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka8" && tukar_uang == "angka7") {
+
+                hasil = masukan * 4.93;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka8" && tukar_uang == "angka6") {
+
+                hasil = masukan * 1.61;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka8" && tukar_uang == "angka5") {
+
+                hasil = masukan * 0.91;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka8" && tukar_uang == "angka4") {
+
+                hasil = masukan * 0.075;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka8" && tukar_uang == "angka3") {
+
+                hasil = masukan * 0.21;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka8" && tukar_uang == "angka2") {
+
+                hasil = masukan * 0.18;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka8" && tukar_uang == "angka1") {
+
+                hasil = masukan * 874;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka7" && tukar_uang == "angka6") {
+
+                hasil = masukan * 0.14;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka7" && tukar_uang == "angka5") {
+
+                hasil = masukan * 294.24;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka7" && tukar_uang == "angka4") {
+
+                hasil = masukan * 0.0063;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka7" && tukar_uang == "angka3") {
+
+                hasil = masukan * 0.017;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka7" && tukar_uang == "angka2") {
+
+                hasil = masukan * 0.16;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka7" && tukar_uang == "angka1") {
+
+                hasil = masukan * 13.472;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka6" && tukar_uang == "angka5") {
+
+                hasil = masukan * 2.159;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka6" && tukar_uang == "angka4") {
+
+                hasil = masukan * 0.046;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka6" && tukar_uang == "angka3") {
+
+                hasil = masukan * 0.13;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka6" && tukar_uang == "angka2") {
+
+                hasil = masukan * 0.11;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka6" && tukar_uang == "angka1") {
+
+                hasil = masukan * 2.160;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka5" && tukar_uang == "angka4") {
+
+                hasil = masukan * 0.082;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka5" && tukar_uang == "angka3") {
+
+                hasil = masukan * 3023;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka5" && tukar_uang == "angka2") {
+
+                hasil = masukan * 20.21;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka5" && tukar_uang == "angka1") {
+
+                hasil = masukan * 3.592;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka4" && tukar_uang == "angka3") {
+
+                hasil = masukan * 0.36;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka4" && tukar_uang == "angka2") {
+
+                hasil = masukan * 2.47;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka4" && tukar_uang == "angka1") {
+
+                hasil = masukan * 120;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka3" && tukar_uang == "angka2") {
+
+                hasil = masukan * 1.12;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka3" && tukar_uang == "angka1") {
+
+                hasil = masukan * 16840;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            } else if (mata_uang == "angka2" && tukar_uang == "angka1") {
+
+                hasil = masukan * 17.038;
+
+                document.getElementById("vw").innerHTML = hasil;
+
+            }
+
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!--ini tugas mata kuliah pemrograman web (chatbot)-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+
+    <!--ini file css-->
+    <style type="text/css">
+        body {
+            background-color: aqua;
+        }
+
+        /*ini box*/
+        .scr-cht {
+            position: relative;
+            margin: 5% auto;
+            height: 400px;
+            width: 600px;
+            background: yellowgreen;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+            overflow-y: scroll;
+        }
+
+        p {
+            color: whitesmoke;
+            font-style: italic;
+            font-size: 20px;
+        }
+
+        /* ini file button kirim*/
+        button[id="kirim"]:hover,
+        button[id="kirim"]:focus {
+            background: #ff5722;
+            transition: 0.2s ease;
+        }
+
+        .pst1 {
+            position: absolute;
+            top: 432px;
+            left: 384px;
+        }
+
+        .pst2 {
+            position: absolute;
+            top: 432px;
+            left: 740px;
+        }
+
+        input[type="text"] {
+            width: 350px;
+            height: 30px;
+        }
+
+        button[id="kirim"] {
+            height: 35px;
+            width: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="scr-cht">
+        <p id="apl1">kirim pesan</p>
+    </div>
+
+    <div class="pst1">
+        <input type="text" name="apl2" id="apl2">
+    </div>
+
+    <div class="pst2">
+        <button id="kirim" onclick="chat()">kirim</button>
+    </div>
+
+
+
+
+
+
+
+    <!-- ini file Javascript-->
+    <script type="text/javascript">
+
+        function chat() {
+
+            let x = document.getElementById('apl2').value;
+            let y = document.getElementById('apl1');
+
+            y.innerHTML = y.innerHTML + "<br><br>" + x;
+        }
+    </script>
+</body>
+
+</html>
